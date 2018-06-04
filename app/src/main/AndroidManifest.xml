@@ -17,14 +17,23 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".NewAppWidget">
+        <receiver android:name=".ProgressWidgetBlue">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/new_app_widget_info" />
+                android:resource="@xml/progress_widget_blue_info" />
+        </receiver>
+        <receiver android:name=".ProgressWidgetWhite">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/progress_widget_white_info" />
         </receiver>
     </application>
 

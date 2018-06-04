@@ -10,15 +10,13 @@ import xyz.sealynn.yearprogressandroid.utils.DateUtils;
 /**
  * Implementation of App Widget functionality.
  */
-public class NewAppWidget extends AppWidgetProvider {
+public class ProgressWidgetWhite extends AppWidgetProvider {
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId) {
 
-//        CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
-        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
-        views.setTextViewText(R.id.appwidget_text, DateUtils.getPercentsofTheYearPassed());
+        RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.progress_widget_white);
+        views.setTextViewText(R.id.tv_percent, DateUtils.getPercentsofTheYearPassed());
         views.setTextViewText(R.id.tv_year, DateUtils.getYear());
         views.setProgressBar(R.id.progress_bar, 100, DateUtils.getFloatofTheYearPassed(), false);
 
